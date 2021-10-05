@@ -19,3 +19,18 @@ services:
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:29092,PLAINTEXT_HOST://localhost:9092
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: "1"
       KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
+
+  mysql-extrato:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: extrato
+      MYSQL_USER: dojao
+#    volumes:
+#      - mysql-extrato-volume:/var/lib/mysql
+#
+#volumes:
+#  - mysql-extrato-volume:

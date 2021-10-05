@@ -1,5 +1,6 @@
 package br.com.zup.extrato.kafka.message;
 
+import br.com.zup.extrato.domain.enums.TipoOperacao;
 import br.com.zup.extrato.domain.modelo.Transacao;
 
 import java.math.BigDecimal;
@@ -7,7 +8,7 @@ import java.time.LocalDateTime;
 
 public class TransacaoMessage {
 
-    private String operacao;
+    private TipoOperacao operacao;
 
     private BigDecimal valor;
 
@@ -19,7 +20,7 @@ public class TransacaoMessage {
 
     public TransacaoMessage(){}
 
-    public TransacaoMessage(String operacao, BigDecimal valor, LocalDateTime data, String idCliente, Long numeroConta) {
+    public TransacaoMessage(TipoOperacao operacao, BigDecimal valor, LocalDateTime data, String idCliente, Long numeroConta) {
         this.operacao = operacao;
         this.valor = valor;
         this.data = data;
@@ -27,7 +28,7 @@ public class TransacaoMessage {
         this.numeroConta = numeroConta;
     }
 
-    public void setOperacao(String operacao) {
+    public void setOperacao(TipoOperacao operacao) {
         this.operacao = operacao;
     }
 
