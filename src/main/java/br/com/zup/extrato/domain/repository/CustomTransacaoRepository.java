@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface CustomTransacaoRepository {
 
-    List<Transacao> findClienteOrdenadorPorData(String idCliente, Long numeroConta, int limit);
+    List<Transacao> findClienteOrdenadorPorData(String idCliente, Long numeroConta, int tamanhoExtrato);
 }

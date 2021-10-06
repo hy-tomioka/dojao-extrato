@@ -16,9 +16,9 @@ public class ValidacaoExceptionHandler {
 
     @ResponseStatus(BAD_REQUEST)
     @ExceptionHandler
-    public List<String> handleConstraintValidationError(ConstraintViolationException exception) {
-        return exception.getConstraintViolations().stream().map(ConstraintViolation::getMessage)
+    public List<ValidacaoErroResponse> handleConstraintValidationError(ConstraintViolationException exception) {
+        return exception.getConstraintViolations().stream()
+                .map(v -> new ValidacaoErroResponse(v.getMessage()))
                 .collect(Collectors.toList());
     }
-
 }

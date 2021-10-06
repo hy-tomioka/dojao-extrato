@@ -1,20 +1,15 @@
 package br.com.zup.extrato.compartilhado.exception;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+
+import static com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility.ANY;
+
+@JsonAutoDetect(fieldVisibility = ANY)
 public class ValidacaoErroResponse {
 
-    private String field;
-    private String mensagem;
+    private final String mensagem;
 
-    public ValidacaoErroResponse(String field, String mensagem) {
-        this.field = field;
+    public ValidacaoErroResponse(String mensagem) {
         this.mensagem = mensagem;
-    }
-
-    public String getField() {
-        return field;
-    }
-
-    public String getMensagem() {
-        return mensagem;
     }
 }

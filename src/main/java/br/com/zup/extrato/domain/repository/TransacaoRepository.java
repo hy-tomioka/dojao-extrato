@@ -8,6 +8,4 @@ import org.springframework.data.repository.PagingAndSortingRepository;
 
 public interface TransacaoRepository extends PagingAndSortingRepository<Transacao, Long>, CustomTransacaoRepository {
 
-    Page<Transacao> findByIdClienteAndNumeroContaOrderByDataDesc(String idCliente, Long numeroConta, Pageable paginacao);
-
 }
