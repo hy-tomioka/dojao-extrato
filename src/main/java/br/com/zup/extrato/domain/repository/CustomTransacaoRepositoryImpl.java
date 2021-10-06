@@ -19,7 +19,7 @@ public class CustomTransacaoRepositoryImpl implements CustomTransacaoRepository 
     private EntityManager entityManager;
 
     @Override
-    public List<Transacao> findClienteOrdenadorPorData(String idCliente, Long numeroConta, int tamanhoExtrato) {
+    public List<Transacao> findClienteOrdenadorPorData(String idCliente, String numeroConta, int tamanhoExtrato) {
         notNull(idCliente, "Id do cliente não pode ser nulo.");
         notNull(numeroConta, "Numero da conta do cliente não pode ser nulo.");
         state(tamanhoExtrato > 0, "Um extrato deve conter um número de transações maior que ZERO.");

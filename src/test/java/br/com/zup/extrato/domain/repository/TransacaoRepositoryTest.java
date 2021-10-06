@@ -23,7 +23,7 @@ class TransacaoRepositoryTest {
     TransacaoRepository repository;
 
     private final String ID_CLIENTE = "1234";
-    private final Long NUMERO_CONTA = 2222L;
+    private final String NUMERO_CONTA = "4321";
     private final LocalDateTime AGORA = LocalDateTime.now();
 
 
@@ -45,7 +45,7 @@ class TransacaoRepositoryTest {
         repository.deleteAll();
         insereTransacoes(5);
 
-        List<Transacao> extrato = repository.findClienteOrdenadorPorData("2222", 2222L, 10);
+        List<Transacao> extrato = repository.findClienteOrdenadorPorData("2222", "2222", 10);
 
         assertEquals(0, extrato.size());
     }

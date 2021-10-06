@@ -38,12 +38,12 @@ public class Transacao {
 
     @NotNull
     @Column(nullable = false)
-    private Long numeroConta;
+    private String numeroConta;
 
     @Deprecated
     public Transacao(){}
 
-    public Transacao(TipoOperacao operacao, BigDecimal valor, LocalDateTime data, String idCliente, Long numeroConta) {
+    public Transacao(TipoOperacao operacao, BigDecimal valor, LocalDateTime data, String idCliente, String numeroConta) {
         this.operacao = operacao;
         this.valor = valor;
         this.data = data;

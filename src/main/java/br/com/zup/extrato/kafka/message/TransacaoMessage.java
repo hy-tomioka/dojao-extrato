@@ -16,11 +16,11 @@ public class TransacaoMessage {
 
     private String idCliente;
 
-    private Long numeroConta;
+    private String numeroConta;
 
     public TransacaoMessage(){}
 
-    public TransacaoMessage(TipoOperacao operacao, BigDecimal valor, LocalDateTime data, String idCliente, Long numeroConta) {
+    public TransacaoMessage(TipoOperacao operacao, BigDecimal valor, LocalDateTime data, String idCliente, String numeroConta) {
         this.operacao = operacao;
         this.valor = valor;
         this.data = data;
@@ -44,7 +44,7 @@ public class TransacaoMessage {
         this.idCliente = idCliente;
     }
 
-    public void setNumeroConta(Long numeroConta) {
+    public void setNumeroConta(String numeroConta) {
         this.numeroConta = numeroConta;
     }
 

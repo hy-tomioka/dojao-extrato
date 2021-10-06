@@ -27,7 +27,7 @@ public class TransacoesController {
     @GetMapping("api/v1/extratos/{idCliente}/contas/{numeroConta}")
     public ResponseEntity<List<ExtratoResponse>> lista(
             @PathVariable String idCliente,
-            @PathVariable Long numeroConta,
+            @PathVariable String numeroConta,
             @RequestParam(defaultValue = "20") @TamanhoExtrato Integer tamanhoExtrato
     ) {
 

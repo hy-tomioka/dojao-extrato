@@ -32,7 +32,7 @@ class KafkaConsumerTest {
     void deveSalvarUmNovoEvento() {
         // cenario
         TransacaoMessage transacaoMessage = new TransacaoMessage(TipoOperacao.DEPOSITO, new BigDecimal("10.0"),
-                LocalDateTime.now(), "1", 1L);
+                LocalDateTime.now(), "1", "1");
         KafkaConsumer kafkaConsumer = new KafkaConsumer(repository);
 
         // acao
